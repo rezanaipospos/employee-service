@@ -1,0 +1,45 @@
+app:
+  name: "EmployeeService"
+  service_group: "human-resources"
+  debug: true
+  port: "7000"
+  host: "0.0.0.0"
+  service: "http"
+  certificate:
+  pem_key:
+  environment: "development"
+databases:
+  - name: "employee"
+    engine: "postgresGCP"
+    username: "postgres"
+    password: "your_db_password"
+    port: "5432"
+    host: "127.0.0.1"
+    maximum_connection: 20
+    usage: "Main databases!"
+    connection: "mainDB"
+    is_private_ip: false
+    private_ip: "192.168.16.3"
+  - name: "employee"
+    engine: "mongo"
+    username: "your_db_username"
+    password: "your_db_password"
+    port: "27017"
+    host: "127.0.01"
+    maximum_connection: 20
+    usage: "Main databases!"
+    connection: "mainDBMonggo"
+jwt:
+  secretkey: "your_secret_key"
+  encrypt: "HS256"
+auth:
+  token: "your_token"
+swagger:
+  username: "your_username"
+  password: "your_password"
+google_cp:
+  pubsub: null
+  logging: null
+  gac_path: "sa"
+  project_id: "your_project_id_gcp"
+  resource_id: "your_resource_id_gcp"

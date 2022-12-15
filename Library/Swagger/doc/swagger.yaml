@@ -1,0 +1,541 @@
+basePath: /company-structure
+definitions:
+  Dto.EmployeeDataDTO:
+    properties:
+      activeStatus:
+        type: boolean
+      address:
+        type: string
+      bank:
+        type: string
+      bankAccountName:
+        type: string
+      bankAccountNo:
+        type: string
+      bpjsNo:
+        type: string
+      citizen:
+        type: string
+      code:
+        type: string
+      companyId:
+        type: integer
+      companyLocationCode:
+        type: string
+      companyName:
+        type: string
+      contractEnd:
+        type: string
+      contractStart:
+        type: string
+      createdBy:
+        type: string
+      createdTime:
+        type: string
+      dateOfBirth:
+        type: string
+      deleted:
+        type: boolean
+      deletedBy:
+        type: string
+      deletedTime:
+        type: string
+      departmentId:
+        type: integer
+      departmentName:
+        type: string
+      drivingLicenseNo:
+        type: string
+      email:
+        type: string
+      ethnic:
+        type: string
+      faceId:
+        type: string
+      familiyCardNo:
+        type: string
+      familyMobilePhoneNo:
+        type: string
+      fingerPrintId:
+        type: string
+      gender:
+        type: string
+      id:
+        type: integer
+      identityNo:
+        type: string
+      jamsostekBalance:
+        type: integer
+      jamsostekNo:
+        type: string
+      jamsostekType:
+        type: string
+      joinDate:
+        type: string
+      locationId:
+        type: integer
+      locationName:
+        type: string
+      machineId:
+        type: integer
+      maritalStatus:
+        type: string
+      mobilePhoneNo:
+        type: string
+      modifiedBy:
+        type: string
+      modifiedTime:
+        type: string
+      name:
+        type: string
+      neighbourHoodWardNo:
+        type: string
+      npwpNo:
+        type: string
+      pantSize:
+        type: integer
+      parent:
+        type: integer
+      phoneNo:
+        type: string
+      placeOfBirth:
+        type: string
+      positionId:
+        type: integer
+      positionName:
+        type: string
+      profilePhoto:
+        type: string
+      religion:
+        type: string
+      resignDate:
+        type: string
+      resignReason:
+        type: string
+      sectionId:
+        type: integer
+      sectionName:
+        type: string
+      shirtSize:
+        type: string
+      shoeSize:
+        type: integer
+      subDistrictName:
+        type: string
+      temporaryAddress:
+        type: string
+      type:
+        type: string
+      urbanName:
+        type: string
+      workStatus:
+        type: string
+    required:
+    - companyName
+    - departmentName
+    - locationName
+    - positionName
+    - sectionName
+    type: object
+  Dto.FingerprintUpdateDTO:
+    properties:
+      faceId:
+        type: string
+      fingerPrintId:
+        type: string
+      machineId:
+        type: integer
+    type: object
+  Dto.ResignStatusUpdateDTO:
+    properties:
+      joinDate:
+        type: string
+      resignDate:
+        type: string
+      resignReason:
+        type: string
+      workStatus:
+        type: string
+    type: object
+  Dto.WorkStatusUpdateDTO:
+    properties:
+      contractEnd:
+        type: string
+      contractStart:
+        type: string
+      workStatus:
+        type: string
+    type: object
+  Response.RespErrorStruct:
+    properties:
+      message:
+        type: string
+      result:
+        additionalProperties:
+          type: string
+        example:
+          key: value
+          key2: value2
+        type: object
+      status:
+        example: 400
+        type: integer
+      title:
+        example: bad_request
+        type: string
+    type: object
+  Response.RespResultStruct:
+    properties:
+      message:
+        type: string
+      result:
+        additionalProperties:
+          type: string
+        example:
+          key: value
+          key2: value2
+        type: object
+      status:
+        type: integer
+      title:
+        type: string
+    type: object
+info:
+  contact: {}
+  description: 'Example: Bearer abcdefghijklmnopqrstuvwxyz1234567890'
+  title: Company Structure Service
+  version: "1.0"
+paths:
+  /employees:
+    post:
+      consumes:
+      - application/json
+      description: 'Sample Payload: `{"code":"10.0009","type":"-","fingerPrintId":"100200300","faceId":"50264525","machineId":11884632,"departmentId":196347512,"sectionId":1,"positionId":1,"companyId":1,"locationId":1,"companyLocationCode":"SSSS","parent":3,"identityNo":"1271000524163","drivingLicenseNo":"150404020603","npwpNo":"0","name":"Staff
+        IT-5","placeOfBirth":"Medan","dateOfBirth":"1990-02-10T07:48:48.243Z","email":"staff5@ssss.com","address":"Jalan
+        Veteran","temporaryAddress":"Jalan Veteran","neighbourHoodWardNo":"1020","urbanName":"Medan","subDistrictName":"Medan
+        Timur","religion":"Buddha","maritalStatus":"Divorced","citizen":"Indonesia","gender":"Male","ethnic":"","mobilePhoneNo":"0821789456","phoneNo":"0821789456","shirtSize":"XL","pantSize":30,"shoeSize":40,"joinDate":"2022-02-10T07:48:48.243Z","resignDate":null,"resignReason":null,"bank":"Mandiri","bankAccountNo":"1006001890","bankAccountName":"Staff
+        5","familyMobilePhoneNo":"555666999","workStatus":"Kontrak","profilePhoto":"\/Img\/staff5","contractStart":"2022-02-10T07:48:48.243Z","contractEnd":"2022-05-10T07:48:48.243Z","bpjsNo":"0","jamsostekNo":"0","jamsostekType":"-","jamsostekBalance":0,"familiyCardNo":"0","activeStatus":true}`'
+      parameters:
+      - description: Example Payload
+        in: body
+        name: '"payload"'
+        required: true
+        schema:
+          $ref: '#/definitions/Dto.EmployeeDataDTO'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/Response.RespResultStruct'
+        "500":
+          description: desc
+          schema:
+            $ref: '#/definitions/Response.RespErrorStruct'
+      security:
+      - Bearer: []
+      summary: EmployeeAdded
+      tags:
+      - Employee
+  /employees/{id_parent}/subordinates/{id}:
+    get:
+      consumes:
+      - application/json
+      description: 'Sample Parameter: `/2/subordinates/9`'
+      parameters:
+      - description: ParentID
+        in: path
+        name: id_parent
+        required: true
+        type: integer
+      - description: Id
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/Response.RespResultStruct'
+        "500":
+          description: desc
+          schema:
+            $ref: '#/definitions/Response.RespErrorStruct'
+      security:
+      - Bearer: []
+      summary: DetailSubordinatesData
+      tags:
+      - Employee
+  /employees/{id}:
+    delete:
+      consumes:
+      - application/json
+      parameters:
+      - description: Id
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/Response.RespResultStruct'
+        "500":
+          description: desc
+          schema:
+            $ref: '#/definitions/Response.RespErrorStruct'
+      security:
+      - Bearer: []
+      summary: EmployeeDeleted
+      tags:
+      - Employee
+    put:
+      consumes:
+      - application/json
+      description: 'Sample Payload: `{"parent":2,"identityNo":"123456789","drivingLicenseNo":"010101010","npwpNo":"101010101","name":"Staff
+        50","placeOfBirth":"Medan","dateOfBirth":"2000-03-10T07:48:48.243Z","email":"email@email.com-edit","address":"Jalan
+        Buku","temporaryAddress":"Jalan Buku","neighbourHoodWardNo":"LK9","urbanName":"Medan","subDistrictName":"Medan
+        Barat","religion":"Islam","maritalStatus":"Married","citizen":"Brazil","gender":"Male","ethnic":"-","mobilePhoneNo":"082156987423","phoneNo":"082156987423","shirtSize":"L","pantSize":10,"shoeSize":10,"bank":"BRI","bankAccountNo":"045225","bankAccountName":"Staff
+        ","familyMobilePhoneNo":"00000","bpjsNo":"0","jamsostekNo":"0","jamsostekType":"A","jamsostekBalance":20000,"familiyCardNo":"0000"}`'
+      parameters:
+      - description: Id
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: Example Payload
+        in: body
+        name: '"payload"'
+        required: true
+        schema:
+          $ref: '#/definitions/Dto.EmployeeDataDTO'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/Response.RespResultStruct'
+        "500":
+          description: desc
+          schema:
+            $ref: '#/definitions/Response.RespErrorStruct'
+      security:
+      - Bearer: []
+      summary: EmployeePersonalInfoUpdated
+      tags:
+      - Employee
+  /employees/{id}/fingerprint:
+    put:
+      consumes:
+      - application/json
+      description: 'Sample Payload: `{"FingerPrintId":"Update FingerPrintId","FaceId":"Update
+        FaceId","MachineId":10}`'
+      parameters:
+      - description: Id
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: Example Payload
+        in: body
+        name: '"payload"'
+        required: true
+        schema:
+          $ref: '#/definitions/Dto.FingerprintUpdateDTO'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/Response.RespResultStruct'
+        "500":
+          description: desc
+          schema:
+            $ref: '#/definitions/Response.RespErrorStruct'
+      security:
+      - Bearer: []
+      summary: EmployeeFingerUpdated
+      tags:
+      - Employee
+  /employees/{id}/resign:
+    put:
+      consumes:
+      - application/json
+      description: 'Sample Payload: `{"WorkStatus":"Resign","ResignDate":"2022-03-12T07:48:48.243Z","ResignReason":"Pindah
+        Kota"}`'
+      parameters:
+      - description: Id
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: Example Payload
+        in: body
+        name: '"payload"'
+        required: true
+        schema:
+          $ref: '#/definitions/Dto.ResignStatusUpdateDTO'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/Response.RespResultStruct'
+        "500":
+          description: desc
+          schema:
+            $ref: '#/definitions/Response.RespErrorStruct'
+      security:
+      - Bearer: []
+      summary: EmployeeResigned
+      tags:
+      - Employee
+  /employees/{id}/subordinates:
+    get:
+      consumes:
+      - application/json
+      description: 'Sample Parameter: `?name=asis&workStatus=Active&code=10.0003`'
+      parameters:
+      - description: Id
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: name
+        in: query
+        name: name
+        type: string
+      - description: workStatus
+        in: query
+        name: workStatus
+        type: string
+      - description: code
+        in: query
+        name: code
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/Response.RespResultStruct'
+        "500":
+          description: desc
+          schema:
+            $ref: '#/definitions/Response.RespErrorStruct'
+      security:
+      - Bearer: []
+      summary: SubordinatesData
+      tags:
+      - Employee
+  /employees/{id}/workstatus:
+    put:
+      consumes:
+      - application/json
+      description: 'Sample Payload: `{"WorkStatus":"Pegawai Tetap","ContractStart":"2022-05-11T07:48:48.243Z","ContractEnd":"2022-12-10T07:48:48.243Z"}`'
+      parameters:
+      - description: Id
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: Example Payload
+        in: body
+        name: '"payload"'
+        required: true
+        schema:
+          $ref: '#/definitions/Dto.WorkStatusUpdateDTO'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/Response.RespResultStruct'
+        "500":
+          description: desc
+          schema:
+            $ref: '#/definitions/Response.RespErrorStruct'
+      security:
+      - Bearer: []
+      summary: EmployeeWorkStatusUpdated
+      tags:
+      - Employee
+  /leaveBalance:
+    get:
+      consumes:
+      - application/json
+      description: 'Sample Parameter: `?companyName=com&locationName=loc&departmentName=dept`'
+      parameters:
+      - description: companyName
+        in: query
+        name: companyName
+        type: string
+      - description: locationName
+        in: query
+        name: locationName
+        type: string
+      - description: departmentName
+        in: query
+        name: departmentName
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/Response.RespResultStruct'
+        "500":
+          description: desc
+          schema:
+            $ref: '#/definitions/Response.RespErrorStruct'
+      security:
+      - Bearer: []
+      summary: SaldocutiData
+      tags:
+      - Leave Balance
+  /leaveBalance/{id}:
+    get:
+      consumes:
+      - application/json
+      description: 'Sample Parameter: `2`'
+      parameters:
+      - description: Id
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/Response.RespResultStruct'
+        "500":
+          description: desc
+          schema:
+            $ref: '#/definitions/Response.RespErrorStruct'
+      security:
+      - Bearer: []
+      summary: SaldocutiDetail
+      tags:
+      - Leave Balance
+securityDefinitions:
+  Bearer:
+    in: Header
+    name: Authorization
+    type: apiKey
+swagger: "2.0"

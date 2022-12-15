@@ -1,0 +1,1757 @@
+basePath: /employee
+definitions:
+  Dto.BonusList:
+    properties:
+      reward:
+        type: integer
+      workingPeriodEnd:
+        type: integer
+      workingPeriodStart:
+        type: integer
+    type: object
+  Dto.EmployeeDataDTO:
+    properties:
+      activeStatus:
+        type: boolean
+      address:
+        type: string
+      bank:
+        type: string
+      bankAccountName:
+        type: string
+      bankAccountNo:
+        type: string
+      bpjsNo:
+        type: string
+      citizen:
+        type: string
+      code:
+        maxLength: 25
+        type: string
+      companyId:
+        type: integer
+      companyLocationAlias:
+        type: string
+      companyLocationCode:
+        type: string
+      companyLocationId:
+        type: integer
+      companyName:
+        type: string
+      contractEnd:
+        type: string
+      contractStart:
+        type: string
+      createdBy:
+        type: string
+      createdTime:
+        type: string
+      dateOfBirth:
+        type: string
+      deleted:
+        type: boolean
+      deletedBy:
+        type: string
+      deletedTime:
+        type: string
+      departmentId:
+        type: integer
+      departmentName:
+        type: string
+      drivingLicenseNo:
+        type: string
+      email:
+        type: string
+      ethnic:
+        type: string
+      extension:
+        type: string
+      faceId:
+        type: string
+      facebook:
+        type: string
+      familyCardNo:
+        type: string
+      familyMobilePhoneNo:
+        type: string
+      fingerPrintId:
+        type: string
+      gender:
+        type: string
+      gmail:
+        type: string
+      id:
+        type: integer
+      identityNo:
+        type: string
+      instagram:
+        type: string
+      jamsostekBalance:
+        type: integer
+      jamsostekNo:
+        type: string
+      jamsostekType:
+        type: string
+      joinDate:
+        type: string
+      licenseType:
+        type: string
+      locationId:
+        type: integer
+      locationName:
+        type: string
+      machineId:
+        type: integer
+      machineName:
+        type: string
+      maritalStatus:
+        type: string
+      mobilePhoneNo:
+        type: string
+      modifiedBy:
+        type: string
+      modifiedTime:
+        type: string
+      name:
+        type: string
+      neighbourHoodWardNo:
+        type: string
+      npwpNo:
+        type: string
+      pantSize:
+        type: integer
+      parent:
+        type: integer
+      parentName:
+        type: string
+      phoneNo:
+        type: string
+      placeOfBirth:
+        type: string
+      positionId:
+        type: integer
+      positionName:
+        type: string
+      postalCode:
+        type: string
+      profilePhoto:
+        type: string
+      religion:
+        type: string
+      resignDate:
+        type: string
+      resignReason:
+        type: string
+      sectionId:
+        type: integer
+      sectionName:
+        type: string
+      shirtSize:
+        type: string
+      shoeSize:
+        type: integer
+      subDistrictName:
+        type: string
+      temporaryAddress:
+        type: string
+      twitter:
+        type: string
+      type:
+        type: string
+      urbanName:
+        type: string
+      whatsapp:
+        type: string
+      workStatus:
+        type: string
+      workStatusChangeDate:
+        type: string
+      workStatusChangeReason:
+        type: string
+    required:
+    - companyId
+    - companyLocationAlias
+    - companyLocationCode
+    - companyLocationId
+    - companyName
+    - departmentId
+    - departmentName
+    - locationId
+    - locationName
+    - positionId
+    - positionName
+    - sectionId
+    - sectionName
+    type: object
+  Dto.EmployeeUpdateDTO:
+    properties:
+      address:
+        type: string
+      bank:
+        type: string
+      bankAccountName:
+        type: string
+      bankAccountNo:
+        type: string
+      bpjsNo:
+        type: string
+      citizen:
+        type: string
+      dateOfBirth:
+        type: string
+      drivingLicenseNo:
+        type: string
+      email:
+        type: string
+      ethnic:
+        type: string
+      extension:
+        type: string
+      facebook:
+        type: string
+      familyCardNo:
+        type: string
+      familyMobilePhoneNo:
+        type: string
+      gender:
+        type: string
+      gmail:
+        type: string
+      id:
+        type: integer
+      identityNo:
+        type: string
+      instagram:
+        type: string
+      jamsostekBalance:
+        type: integer
+      jamsostekNo:
+        type: string
+      jamsostekType:
+        type: string
+      licenseType:
+        type: string
+      maritalStatus:
+        type: string
+      mobilePhoneNo:
+        type: string
+      modifiedBy:
+        type: string
+      modifiedTime:
+        type: string
+      name:
+        type: string
+      neighbourHoodWardNo:
+        type: string
+      npwpNo:
+        type: string
+      pantSize:
+        type: integer
+      parent:
+        type: integer
+      phoneNo:
+        type: string
+      placeOfBirth:
+        type: string
+      religion:
+        type: string
+      shirtSize:
+        type: string
+      shoeSize:
+        type: integer
+      subDistrictName:
+        type: string
+      temporaryAddress:
+        type: string
+      twitter:
+        type: string
+      urbanName:
+        type: string
+      whatsapp:
+        type: string
+    type: object
+  Dto.FaceIdUpdateDTO:
+    properties:
+      faceId:
+        type: string
+      id:
+        type: integer
+      machineId:
+        type: integer
+    type: object
+  Dto.FingerprintUpdateDTO:
+    properties:
+      faceId:
+        type: string
+      fingerPrintId:
+        type: string
+      id:
+        type: integer
+      machineId:
+        type: integer
+      modifiedBy:
+        type: string
+      modifiedTime:
+        type: string
+    required:
+    - fingerPrintId
+    type: object
+  Dto.LeaveBalanceAdjustmentDTO:
+    properties:
+      createdBy:
+        type: string
+      createdTime:
+        type: string
+      deleted:
+        type: boolean
+      employeeCode:
+        maxLength: 50
+        type: string
+      employeeId:
+        type: integer
+      endDate:
+        type: string
+      id:
+        type: integer
+      leaveId:
+        type: integer
+      quantity:
+        type: integer
+      reason:
+        type: string
+      startDate:
+        type: string
+      tahun:
+        type: integer
+      type:
+        type: string
+    required:
+    - employeeCode
+    type: object
+  Dto.LeaveBalancePolicyDTO:
+    properties:
+      autoCutLeaveWeekly:
+        type: boolean
+      companyId:
+        type: integer
+      companyName:
+        type: string
+      createdBy:
+        type: string
+      createdTime:
+        type: string
+      id:
+        type: integer
+      leaveBalanceAccumulation:
+        type: boolean
+      leaveBalanceBonusByLenghtOfWork:
+        type: boolean
+      leaveBalanceBonusList:
+        items:
+          $ref: '#/definitions/Dto.BonusList'
+        type: array
+      modifiedBy:
+        type: string
+      modifiedTime:
+        type: string
+    type: object
+  Dto.MachineIdUpdateDTO:
+    properties:
+      id:
+        type: integer
+      machineId:
+        type: integer
+    type: object
+  Dto.ResignStatusUpdateDTO:
+    properties:
+      id:
+        type: integer
+      joinDate:
+        type: string
+      resignDate:
+        type: string
+      resignReason:
+        type: string
+      workStatus:
+        type: string
+    required:
+    - id
+    - workStatus
+    type: object
+  Dto.TransferDataDTO:
+    properties:
+      createdBy:
+        type: string
+      createdTime:
+        type: string
+      deleted:
+        type: boolean
+      deletedBy:
+        type: string
+      deletedTime:
+        type: string
+      employeeCode:
+        type: string
+      employeeId:
+        type: integer
+      employeeName:
+        type: string
+      fingerPrintId:
+        type: string
+      id:
+        type: integer
+      machineId:
+        type: integer
+      machineName:
+        type: string
+      modifiedBy:
+        type: string
+      modifiedTime:
+        type: string
+      newCompanyLocationCode:
+        type: string
+      newCompanyName:
+        type: string
+      newDepartmentName:
+        type: string
+      newEmployeeCode:
+        type: string
+      newIdCompany:
+        type: integer
+      newIdDepartment:
+        type: integer
+      newIdLocation:
+        type: integer
+      newIdPosition:
+        type: integer
+      newIdSection:
+        type: integer
+      newLocationName:
+        type: string
+      newPositionName:
+        type: string
+      newSectionName:
+        type: string
+      oldCompanyLocationCode:
+        type: string
+      oldCompanyName:
+        type: string
+      oldDepartmentName:
+        type: string
+      oldEmployeeCode:
+        type: string
+      oldIdCompany:
+        type: integer
+      oldIdDepartment:
+        type: integer
+      oldIdPosition:
+        type: integer
+      oldIdSection:
+        type: integer
+      oldIdlocation:
+        type: integer
+      oldLocationName:
+        type: string
+      oldPositionName:
+        type: string
+      oldSectionName:
+        type: string
+      reason:
+        type: string
+      transferCode:
+        type: string
+      transferDate:
+        type: string
+    required:
+    - employeeId
+    - fingerPrintId
+    - machineId
+    - machineName
+    - newCompanyLocationCode
+    - newCompanyName
+    - newDepartmentName
+    - newEmployeeCode
+    - newIdCompany
+    - newIdDepartment
+    - newIdLocation
+    - newIdPosition
+    - newIdSection
+    - newLocationName
+    - newPositionName
+    - newSectionName
+    - oldCompanyLocationCode
+    - oldCompanyName
+    - oldDepartmentName
+    - oldEmployeeCode
+    - oldIdCompany
+    - oldIdDepartment
+    - oldIdPosition
+    - oldIdSection
+    - oldIdlocation
+    - oldLocationName
+    - oldPositionName
+    - oldSectionName
+    - transferCode
+    type: object
+  Dto.WorkStatusUpdateDTO:
+    properties:
+      contractEnd:
+        type: string
+      contractStart:
+        type: string
+      createdBy:
+        type: string
+      createdTime:
+        type: string
+      id:
+        type: integer
+      modifiedBy:
+        type: string
+      modifiedTime:
+        type: string
+      workStatus:
+        type: string
+      workStatusChangeDate:
+        type: string
+      workStatusChangeReason:
+        type: string
+    required:
+    - id
+    - workStatus
+    - workStatusChangeDate
+    - workStatusChangeReason
+    type: object
+  Response.RespErrorStruct:
+    properties:
+      message:
+        type: string
+      result:
+        additionalProperties:
+          type: string
+        example:
+          key: value
+          key2: value2
+        type: object
+      status:
+        example: 400
+        type: integer
+      title:
+        example: bad_request
+        type: string
+    type: object
+  Response.RespResultStruct:
+    properties:
+      message:
+        type: string
+      result:
+        additionalProperties:
+          type: string
+        example:
+          key: value
+          key2: value2
+        type: object
+      status:
+        type: integer
+      title:
+        type: string
+    type: object
+info:
+  contact: {}
+  description: 'Example: Bearer abcdefghijklmnopqrstuvwxyz12345678901'
+  title: Employee Service
+  version: "1.0"
+paths:
+  /check-email/{email}:
+    get:
+      consumes:
+      - application/json
+      description: 'Sample Parameter: `putra@ssss.com`'
+      parameters:
+      - description: email
+        in: path
+        name: email
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/Response.RespResultStruct'
+        "500":
+          description: desc
+          schema:
+            $ref: '#/definitions/Response.RespErrorStruct'
+      security:
+      - Bearer: []
+      summary: Employee Check Email
+      tags:
+      - Employee
+  /check-employee-id/{id}:
+    get:
+      consumes:
+      - application/json
+      description: 'Sample Parameter: `1`'
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/Response.RespResultStruct'
+        "500":
+          description: desc
+          schema:
+            $ref: '#/definitions/Response.RespErrorStruct'
+      security:
+      - Bearer: []
+      summary: Employee Check ID
+      tags:
+      - Employee
+  /check-mobile-phone-number/{mobilePhoneNumber}:
+    get:
+      consumes:
+      - application/json
+      description: 'Sample Parameter: `082134567890`'
+      parameters:
+      - description: mobilePhoneNo
+        in: path
+        name: mobilePhoneNo
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/Response.RespResultStruct'
+        "500":
+          description: desc
+          schema:
+            $ref: '#/definitions/Response.RespErrorStruct'
+      security:
+      - Bearer: []
+      summary: Employee Check Mobile Phone Number
+      tags:
+      - Employee
+  /dapr-state/{stateStore}:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: stateStore
+        in: path
+        name: stateStore
+        required: true
+        type: string
+      - description: payload
+        in: body
+        name: payload
+        required: true
+        schema:
+          additionalProperties: true
+          type: object
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/Response.RespResultStruct'
+        "500":
+          description: desc
+          schema:
+            $ref: '#/definitions/Response.RespErrorStruct'
+      tags:
+      - Sample
+  /dapr-state/{stateStore}/{key}:
+    delete:
+      consumes:
+      - application/json
+      parameters:
+      - description: stateStore
+        in: path
+        name: stateStore
+        required: true
+        type: string
+      - description: key
+        in: path
+        name: key
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/Response.RespResultStruct'
+        "500":
+          description: desc
+          schema:
+            $ref: '#/definitions/Response.RespErrorStruct'
+      tags:
+      - Sample
+    get:
+      consumes:
+      - application/json
+      parameters:
+      - description: stateStore
+        in: path
+        name: stateStore
+        required: true
+        type: string
+      - description: key
+        in: path
+        name: key
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/Response.RespResultStruct'
+        "500":
+          description: desc
+          schema:
+            $ref: '#/definitions/Response.RespErrorStruct'
+      tags:
+      - Sample
+  /dashboards/employee/length-of-work/{numberOfYear}:
+    get:
+      consumes:
+      - application/json
+      parameters:
+      - description: numberOfYear
+        in: path
+        name: numberOfYear
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/Response.RespResultStruct'
+        "500":
+          description: desc
+          schema:
+            $ref: '#/definitions/Response.RespErrorStruct'
+      security:
+      - Bearer: []
+      summary: TotalEmployeeByLengthOfWork
+      tags:
+      - Dashboards
+  /dashboards/employee/new:
+    get:
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/Response.RespResultStruct'
+        "500":
+          description: desc
+          schema:
+            $ref: '#/definitions/Response.RespErrorStruct'
+      security:
+      - Bearer: []
+      summary: NewEmployeeData
+      tags:
+      - Dashboards
+  /dashboards/employee/religion/summary:
+    get:
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/Response.RespResultStruct'
+        "500":
+          description: desc
+          schema:
+            $ref: '#/definitions/Response.RespErrorStruct'
+      security:
+      - Bearer: []
+      summary: TotalReligionSummary
+      tags:
+      - Dashboards
+  /dashboards/employee/work-status/summary:
+    get:
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/Response.RespResultStruct'
+        "500":
+          description: desc
+          schema:
+            $ref: '#/definitions/Response.RespErrorStruct'
+      security:
+      - Bearer: []
+      summary: TotalWorkStatusSummary
+      tags:
+      - Dashboards
+  /dashboards/employee/work-status/will-expire/summary:
+    get:
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/Response.RespResultStruct'
+        "500":
+          description: desc
+          schema:
+            $ref: '#/definitions/Response.RespErrorStruct'
+      security:
+      - Bearer: []
+      summary: TotalWillExpireEmployeeContract
+      tags:
+      - Dashboards
+  /employee:
+    get:
+      consumes:
+      - application/json
+      description: 'Sample Parameter: `?search=wijaya`'
+      parameters:
+      - description: search
+        in: query
+        name: search
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/Response.RespResultStruct'
+        "500":
+          description: desc
+          schema:
+            $ref: '#/definitions/Response.RespErrorStruct'
+      security:
+      - Bearer: []
+      summary: EmployeeSearch
+      tags:
+      - Employee
+  /employees:
+    post:
+      consumes:
+      - application/json
+      description: 'Sample Payload: `{"code":"12345.67890","type":"-","fingerPrintId":"100200300","faceId":"50264525","machineId":11884632,"MachineName":"Mesin","departmentId":196347512,"departmentName":"deptName","sectionId":1,"sectionName":"sectName","positionId":1,"positionName":"potiName","companyId":1,"companyName":"CompnName","locationId":1,"locationName":"LocName","companyLocationId":1,"companyLocationCode":"SSSS","parent":61,"parentName":"Juliana","identityNo":"1271000524163","drivingLicenseNo":"150404020603","npwpNo":"0","name":"Staff","placeOfBirth":"Medan","dateOfBirth":"1990-02-10T07:48:48.243Z","email":"test@ssss.com","address":"Jalan
+        Veteran","temporaryAddress":"Jalan Veteran","neighbourHoodWardNo":"1020","urbanName":"Medan","subDistrictName":"Medan
+        Timur","religion":"Buddha","maritalStatus":"Divorced","citizen":"Indonesia","gender":"Male","ethnic":"-","mobilePhoneNo":"0821789456","phoneNo":"0821789456","shirtSize":"XL","pantSize":30,"shoeSize":40,"joinDate":"2022-02-10T07:48:48.243Z","resignDate":null,"resignReason":null,"bank":"Mandiri","bankAccountNo":"1006001890","bankAccountName":"Test","familyMobilePhoneNo":"555666999","workStatus":"Kontrak","profilePhoto":"/Img/test","contractStart":"2022-02-10T07:48:48.243Z","contractEnd":"2022-05-10T07:48:48.243Z","bpjsNo":"0","jamsostekNo":"0","jamsostekType":"-","jamsostekBalance":0,"familyCardNo":"0","activeStatus":true,"extension":"123456","whatsapp":"082189890","instagram":"@instagram","twitter":"@twitter","gmail":"@gmail","facebook":"@facebook"}`'
+      parameters:
+      - description: Example Payload
+        in: body
+        name: '"payload"'
+        required: true
+        schema:
+          $ref: '#/definitions/Dto.EmployeeDataDTO'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/Response.RespResultStruct'
+        "500":
+          description: desc
+          schema:
+            $ref: '#/definitions/Response.RespErrorStruct'
+      security:
+      - Bearer: []
+      summary: EmployeeAdded
+      tags:
+      - Employee
+  /employees/:
+    get:
+      consumes:
+      - application/json
+      description: 'Sample Parameter: `?sortColumn=code&sortOrder=desc&pageSize=10&pageNumber=1&code=111222333&name=staff`'
+      parameters:
+      - description: sortColumn
+        in: query
+        name: sortColumn
+        type: string
+      - description: sortOrder
+        in: query
+        name: sortOrder
+        type: string
+      - description: pageSize
+        in: query
+        name: pageSize
+        type: integer
+      - description: pageNumber
+        in: query
+        name: pageNumber
+        type: integer
+      - description: code
+        in: query
+        name: code
+        type: string
+      - description: name
+        in: query
+        name: name
+        type: string
+      - description: machineId
+        in: query
+        name: machineId
+        type: integer
+      - description: companyName
+        in: query
+        name: companyName
+        type: string
+      - description: companyLocationCode
+        in: query
+        name: companyLocationCode
+        type: string
+      - description: departmentName
+        in: query
+        name: departmentName
+        type: string
+      - description: workStatus
+        in: query
+        name: workStatus
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/Response.RespResultStruct'
+        "500":
+          description: desc
+          schema:
+            $ref: '#/definitions/Response.RespErrorStruct'
+      security:
+      - Bearer: []
+      summary: EmployeeBrowse
+      tags:
+      - Employee
+  /employees/{id_parent}/subordinates/{id}:
+    get:
+      consumes:
+      - application/json
+      description: 'Sample Parameter: `/2/subordinates/9`'
+      parameters:
+      - description: ParentID
+        in: path
+        name: id_parent
+        required: true
+        type: integer
+      - description: Id
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/Response.RespResultStruct'
+        "500":
+          description: desc
+          schema:
+            $ref: '#/definitions/Response.RespErrorStruct'
+      security:
+      - Bearer: []
+      summary: DetailSubordinatesData
+      tags:
+      - Employee
+  /employees/{id}:
+    delete:
+      consumes:
+      - application/json
+      parameters:
+      - description: Id
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/Response.RespResultStruct'
+        "500":
+          description: desc
+          schema:
+            $ref: '#/definitions/Response.RespErrorStruct'
+      security:
+      - Bearer: []
+      summary: EmployeeDeleted
+      tags:
+      - Employee
+    get:
+      consumes:
+      - application/json
+      description: 'Sample Parameter: `3`'
+      parameters:
+      - description: Id
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/Response.RespResultStruct'
+        "500":
+          description: desc
+          schema:
+            $ref: '#/definitions/Response.RespErrorStruct'
+      security:
+      - Bearer: []
+      summary: EmployeeBrowseDetail
+      tags:
+      - Employee
+    put:
+      consumes:
+      - application/json
+      description: 'Sample Payload: `{"parent":2,"identityNo":"15246352","drivingLicenseNo":"584967222","npwpNo":"78995525","name":"Cris
+        Jhon","placeOfBirth":"Jakarta","dateOfBirth":"2000-03-10T07:48:48.243Z","email":"crhis@email.com","address":"Jalan
+        Buku","temporaryAddress":"Jalan Buku","neighbourHoodWardNo":"12345","urbanName":"Medan","subDistrictName":"Marelan","religion":"Atheis","maritalStatus":"Married","citizen":"Medan","gender":"Pria","ethnic":"ethnic","mobilePhoneNo":"082134566","phoneNo":"098765465","shirtSize":"L","pantSize":10,"shoeSize":10,"bank":"BCA","bankAccountNo":"150505002","bankAccountName":"Chris
+        Jhon","familyMobilePhoneNo":"082134567673","bpjsNo":"123455","jamsostekNo":"1234567890","jamsostekType":"Kelas
+        1","jamsostekBalance":20000,"familyCardNo":"241231","extension":"-","licenseType":"-","whatsapp":"0821898901","instagram":"@instagramm","twitter":"@twitterr","gmail":"@gmaill","facebook":"@facebookk"}`'
+      parameters:
+      - description: Id
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: Example Payload
+        in: body
+        name: '"payload"'
+        required: true
+        schema:
+          $ref: '#/definitions/Dto.EmployeeUpdateDTO'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/Response.RespResultStruct'
+        "500":
+          description: desc
+          schema:
+            $ref: '#/definitions/Response.RespErrorStruct'
+      security:
+      - Bearer: []
+      summary: EmployeePersonalInfoUpdated
+      tags:
+      - Employee
+  /employees/{id}/faceid:
+    put:
+      consumes:
+      - application/json
+      description: 'Sample Payload: `{"faceId":"3211","machineId":3212}`'
+      parameters:
+      - description: Id
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: Example Payload
+        in: body
+        name: '"payload"'
+        required: true
+        schema:
+          $ref: '#/definitions/Dto.FaceIdUpdateDTO'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/Response.RespResultStruct'
+        "500":
+          description: desc
+          schema:
+            $ref: '#/definitions/Response.RespErrorStruct'
+      security:
+      - Bearer: []
+      summary: Update Face Id
+      tags:
+      - Employee
+  /employees/{id}/fingerprint:
+    put:
+      consumes:
+      - application/json
+      description: 'Sample Payload: `{"FingerPrintId":"Update FingerPrintId","FaceId":"Update
+        FaceId","MachineId":10}`'
+      parameters:
+      - description: Id
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: Example Payload
+        in: body
+        name: '"payload"'
+        required: true
+        schema:
+          $ref: '#/definitions/Dto.FingerprintUpdateDTO'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/Response.RespResultStruct'
+        "500":
+          description: desc
+          schema:
+            $ref: '#/definitions/Response.RespErrorStruct'
+      security:
+      - Bearer: []
+      summary: EmployeeFingerUpdated
+      tags:
+      - Employee
+  /employees/{id}/head:
+    get:
+      consumes:
+      - application/json
+      description: 'Sample Parameter: `?transaction=leave`'
+      parameters:
+      - description: Id
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: transaction
+        enum:
+        - permission
+        - leave
+        - business-trip
+        - change-schedulue
+        - job-vacancy-request
+        - overtimes
+        in: query
+        name: transaction
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/Response.RespResultStruct'
+        "500":
+          description: desc
+          schema:
+            $ref: '#/definitions/Response.RespErrorStruct'
+      security:
+      - Bearer: []
+      summary: EmployeeGetHead
+      tags:
+      - Employee
+  /employees/{id}/machineid:
+    put:
+      consumes:
+      - application/json
+      description: 'Sample Payload: `{"MachineId":666}`'
+      parameters:
+      - description: Id
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: Example Payload
+        in: body
+        name: '"payload"'
+        required: true
+        schema:
+          $ref: '#/definitions/Dto.MachineIdUpdateDTO'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/Response.RespResultStruct'
+        "500":
+          description: desc
+          schema:
+            $ref: '#/definitions/Response.RespErrorStruct'
+      security:
+      - Bearer: []
+      summary: Update Machine Id
+      tags:
+      - Employee
+  /employees/{id}/read-photo:
+    get:
+      consumes:
+      - application/json
+      description: 'Sample Parameter: `3`'
+      parameters:
+      - description: Id
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/Response.RespResultStruct'
+        "500":
+          description: desc
+          schema:
+            $ref: '#/definitions/Response.RespErrorStruct'
+      security:
+      - Bearer: []
+      summary: Employee Upload Photo
+      tags:
+      - Employee
+  /employees/{id}/resign:
+    put:
+      consumes:
+      - application/json
+      description: 'Sample Payload: `{"WorkStatus":"Resign","ResignDate":"2022-03-12T07:48:48.243Z","ResignReason":"Pindah
+        Kota"}`'
+      parameters:
+      - description: Id
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: Example Payload
+        in: body
+        name: '"payload"'
+        required: true
+        schema:
+          $ref: '#/definitions/Dto.ResignStatusUpdateDTO'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/Response.RespResultStruct'
+        "500":
+          description: desc
+          schema:
+            $ref: '#/definitions/Response.RespErrorStruct'
+      security:
+      - Bearer: []
+      summary: EmployeeResigned
+      tags:
+      - Employee
+  /employees/{id}/subordinates:
+    get:
+      consumes:
+      - application/json
+      description: 'Sample Parameter: `?name=asis&workStatus=Active&code=10.0003`'
+      parameters:
+      - description: Id
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: name
+        in: query
+        name: name
+        type: string
+      - description: workStatus
+        in: query
+        name: workStatus
+        type: string
+      - description: code
+        in: query
+        name: code
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/Response.RespResultStruct'
+        "500":
+          description: desc
+          schema:
+            $ref: '#/definitions/Response.RespErrorStruct'
+      security:
+      - Bearer: []
+      summary: SubordinatesData
+      tags:
+      - Employee
+  /employees/{id}/upload-photo:
+    post:
+      consumes:
+      - application/json
+      description: 'Sample Parameter: `3`'
+      parameters:
+      - description: Id
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: file Photo
+        in: formData
+        name: file
+        required: true
+        type: file
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/Response.RespResultStruct'
+        "500":
+          description: desc
+          schema:
+            $ref: '#/definitions/Response.RespErrorStruct'
+      security:
+      - Bearer: []
+      summary: Employee Upload Photo
+      tags:
+      - Employee
+  /employees/{id}/workstatus:
+    put:
+      consumes:
+      - application/json
+      description: 'Sample Payload: `{"WorkStatus" : "Karyawan Tetap","ContractStart"
+        : "2022-05-11T07:48:48.243Z","ContractEnd" : "2022-12-10T07:48:48.243Z","WorkStatusChangeReason"
+        : "alasan","WorkStatusChangeDate" : "2022-12-10T07:48:48.243Z"}`'
+      parameters:
+      - description: Id
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: Example Payload
+        in: body
+        name: '"payload"'
+        required: true
+        schema:
+          $ref: '#/definitions/Dto.WorkStatusUpdateDTO'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/Response.RespResultStruct'
+        "500":
+          description: desc
+          schema:
+            $ref: '#/definitions/Response.RespErrorStruct'
+      security:
+      - Bearer: []
+      summary: Employee Work Status Updated (Training, Kontrak, Karyawan Tetap, Mitra
+        Kerja, Resign)
+      tags:
+      - Employee
+  /leave-balance:
+    get:
+      consumes:
+      - application/json
+      description: 'Sample Parameter: `?sortColumn=id&sortOrder=desc&pageSize=20?companyName=com&locationName=loc&departmentName=dept`'
+      parameters:
+      - description: sortColumn
+        in: query
+        name: sortColumn
+        type: string
+      - description: sortOrder
+        in: query
+        name: sortOrder
+        type: string
+      - description: pageSize
+        in: query
+        name: pageSize
+        type: integer
+      - description: pageNumber
+        in: query
+        name: pageNumber
+        type: integer
+      - description: companyName
+        in: query
+        name: companyName
+        type: string
+      - description: locationName
+        in: query
+        name: locationName
+        type: string
+      - description: departmentName
+        in: query
+        name: departmentName
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/Response.RespResultStruct'
+        "500":
+          description: desc
+          schema:
+            $ref: '#/definitions/Response.RespErrorStruct'
+      security:
+      - Bearer: []
+      summary: Show Leave Balance Data
+      tags:
+      - Leave Balance
+    post:
+      consumes:
+      - application/json
+      description: 'Sample Payload: `{"employeeId": 36,"employeeCode":"10.0001","startDate":"2022-02-10T07:48:48.243Z","endDate":"2022-02-10T07:48:48.243Z","type":"increase","quantity":
+        5,"reason":"Potongan Cuti 15 Hari"}`'
+      parameters:
+      - description: Example Payload
+        in: body
+        name: '"payload"'
+        required: true
+        schema:
+          $ref: '#/definitions/Dto.LeaveBalanceAdjustmentDTO'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/Response.RespResultStruct'
+        "500":
+          description: desc
+          schema:
+            $ref: '#/definitions/Response.RespErrorStruct'
+      security:
+      - Bearer: []
+      summary: Create Leave Balance Adjusment
+      tags:
+      - Leave Balance
+  /leave-balance/{employeeId}:
+    get:
+      consumes:
+      - application/json
+      description: 'Sample Parameter: `2`'
+      parameters:
+      - description: employeeId
+        in: path
+        name: employeeId
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/Response.RespResultStruct'
+        "500":
+          description: desc
+          schema:
+            $ref: '#/definitions/Response.RespErrorStruct'
+      security:
+      - Bearer: []
+      summary: Show Leave Balance Detail Data
+      tags:
+      - Leave Balance
+  /leave-balance/{employeeId}/{year}/history:
+    get:
+      consumes:
+      - application/json
+      description: 'Sample Parameter: `123/2021`'
+      parameters:
+      - description: employeeId
+        in: path
+        name: employeeId
+        required: true
+        type: integer
+      - description: year
+        in: path
+        name: year
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/Response.RespResultStruct'
+        "500":
+          description: desc
+          schema:
+            $ref: '#/definitions/Response.RespErrorStruct'
+      security:
+      - Bearer: []
+      summary: Show Leave Balance Adjustment Detail
+      tags:
+      - Leave Balance
+  /leave-balance/policy:
+    get:
+      consumes:
+      - application/json
+      parameters:
+      - description: companyName
+        in: query
+        name: companyName
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/Response.RespResultStruct'
+        "500":
+          description: desc
+          schema:
+            $ref: '#/definitions/Response.RespErrorStruct'
+      security:
+      - Bearer: []
+      summary: Select All Data
+      tags:
+      - Leave Balance Policy
+    post:
+      consumes:
+      - application/json
+      description: 'Sample Payload: `{"companyId":2,"companyName":"PT. SSSS","autoCutLeaveWeekly":true,"leaveBalanceAccumulation":true,"leaveBalanceBonusByLenghtOfWork":true,"leaveBalanceBonusList":[{"workingPeriodStart":5,"workingPeriodEnd":15,"reward":5},{"workingPeriodStart":10,"workingPeriodEnd":15,"reward":5}]}`'
+      parameters:
+      - description: Example Payload
+        in: body
+        name: '"payload"'
+        required: true
+        schema:
+          $ref: '#/definitions/Dto.LeaveBalancePolicyDTO'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/Response.RespResultStruct'
+        "500":
+          description: desc
+          schema:
+            $ref: '#/definitions/Response.RespErrorStruct'
+      security:
+      - Bearer: []
+      summary: Save Data
+      tags:
+      - Leave Balance Policy
+  /leave-balance/policy/{id}:
+    put:
+      consumes:
+      - application/json
+      description: 'Sample Payload: `{"autoCutLeaveWeekly":false,"leaveBalanceAccumulation":false,"leaveBalanceBonusByLenghtOfWork":false,"leaveBalanceBonusList":[{"workingPeriodStart":10,"workingPeriodEnd":10,"reward":10},{"workingPeriodStart":11,"workingPeriodEnd":11,"reward":11}]}`'
+      parameters:
+      - description: Id
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: Example Payload
+        in: body
+        name: '"payload"'
+        required: true
+        schema:
+          $ref: '#/definitions/Dto.LeaveBalancePolicyDTO'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/Response.RespResultStruct'
+        "500":
+          description: desc
+          schema:
+            $ref: '#/definitions/Response.RespErrorStruct'
+      security:
+      - Bearer: []
+      summary: Update Data
+      tags:
+      - Leave Balance Policy
+  /leave-balance/reset-leave-balance:
+    get:
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/Response.RespResultStruct'
+        "500":
+          description: desc
+          schema:
+            $ref: '#/definitions/Response.RespErrorStruct'
+      security:
+      - Bearer: []
+      summary: Reset Leave Balance
+      tags:
+      - Leave Balance
+      - Leave Balance
+  /ping:
+    get:
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/Response.RespResultStruct'
+        "500":
+          description: desc
+          schema:
+            $ref: '#/definitions/Response.RespErrorStruct'
+      tags:
+      - Sample
+  /transfers:
+    get:
+      consumes:
+      - application/json
+      description: 'Sample Parameter: `?sortColumn=id&sortOrder=desc&pageSize=0&pageNumber=0&employeeCode=empl&transferCode=12`'
+      parameters:
+      - description: sortColumn
+        in: query
+        name: sortColumn
+        type: string
+      - description: sortOrder
+        in: query
+        name: sortOrder
+        type: string
+      - description: pageSize
+        in: query
+        name: pageSize
+        type: integer
+      - description: pageNumber
+        in: query
+        name: pageNumber
+        type: integer
+      - description: transferCode
+        in: query
+        name: transferCode
+        type: string
+      - description: employeeCode
+        in: query
+        name: employeeCode
+        type: string
+      - description: employeeName
+        in: query
+        name: employeeName
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/Response.RespResultStruct'
+        "500":
+          description: desc
+          schema:
+            $ref: '#/definitions/Response.RespErrorStruct'
+      security:
+      - Bearer: []
+      summary: TransferData
+      tags:
+      - Transfer
+    post:
+      consumes:
+      - application/json
+      description: 'Sample Payload: `{"transferCode":"001","transferDate":"2022-04-01T07:48:48.243Z","employeeId":2,"employeeCode":"10.0002","machineId":1,"machineName":"nama
+        mesin","fingerPrintId":"finger 1","oldEmployeeCode":"000.0002","oldCompanyName":"SSSS","oldLocationName":"Medan","oldDepartmentName":"Acconounting","oldSectionName":"Bagian
+        1","oldPositionName":"Staff IT","oldCompanyLocationCode":"101010","newEmployeeCode":"10.0002","newCompanyName":"S4","newLocationName":"Medan","newDepartmentName":"MIS
+        / IT","newSectionName":"Bagian 3","newPositionName":"Dev Ops","newCompanyLocationCode":"10101010","reason":"Reason"}`'
+      parameters:
+      - description: Example Payload
+        in: body
+        name: '"payload"'
+        required: true
+        schema:
+          $ref: '#/definitions/Dto.TransferDataDTO'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/Response.RespResultStruct'
+        "500":
+          description: desc
+          schema:
+            $ref: '#/definitions/Response.RespErrorStruct'
+      security:
+      - Bearer: []
+      summary: TransferCreate
+      tags:
+      - Transfer
+  /transfers/{id}:
+    get:
+      consumes:
+      - application/json
+      description: 'Sample Parameter: `3`'
+      parameters:
+      - description: Id
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/Response.RespResultStruct'
+        "500":
+          description: desc
+          schema:
+            $ref: '#/definitions/Response.RespErrorStruct'
+      security:
+      - Bearer: []
+      summary: TransferDetail
+      tags:
+      - Transfer
+securityDefinitions:
+  Bearer:
+    in: Header
+    name: Authorization
+    type: apiKey
+swagger: "2.0"
